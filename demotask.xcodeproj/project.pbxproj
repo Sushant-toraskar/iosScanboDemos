@@ -15,6 +15,10 @@
 		927303B928FD80A300274B3B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 927303B728FD80A300274B3B /* LaunchScreen.storyboard */; };
 		927303C428FD80A300274B3B /* demotaskTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927303C328FD80A300274B3B /* demotaskTests.swift */; };
 		927303CF28FD80A300274B3B /* demotaskUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927303CE28FD80A300274B3B /* demotaskUITests.swift */; };
+		927303E028FD82F200274B3B /* OtherTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927303DE28FD82F200274B3B /* OtherTableViewCell.swift */; };
+		927303E128FD82F200274B3B /* OtherTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 927303DF28FD82F200274B3B /* OtherTableViewCell.xib */; };
+		927303E428FD881000274B3B /* TaskTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927303E228FD881000274B3B /* TaskTableViewCell.swift */; };
+		927303E528FD881000274B3B /* TaskTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 927303E328FD881000274B3B /* TaskTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +53,10 @@
 		927303CA28FD80A300274B3B /* demotaskUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = demotaskUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		927303CE28FD80A300274B3B /* demotaskUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = demotaskUITests.swift; sourceTree = "<group>"; };
 		927303D028FD80A300274B3B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		927303DE28FD82F200274B3B /* OtherTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherTableViewCell.swift; sourceTree = "<group>"; };
+		927303DF28FD82F200274B3B /* OtherTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OtherTableViewCell.xib; sourceTree = "<group>"; };
+		927303E228FD881000274B3B /* TaskTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskTableViewCell.swift; sourceTree = "<group>"; };
+		927303E328FD881000274B3B /* TaskTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TaskTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +110,10 @@
 				927303AC28FD80A000274B3B /* AppDelegate.swift */,
 				927303AE28FD80A000274B3B /* SceneDelegate.swift */,
 				927303B028FD80A000274B3B /* ViewController.swift */,
+				927303DE28FD82F200274B3B /* OtherTableViewCell.swift */,
+				927303E228FD881000274B3B /* TaskTableViewCell.swift */,
+				927303E328FD881000274B3B /* TaskTableViewCell.xib */,
+				927303DF28FD82F200274B3B /* OtherTableViewCell.xib */,
 				927303B228FD80A000274B3B /* Main.storyboard */,
 				927303B528FD80A300274B3B /* Assets.xcassets */,
 				927303B728FD80A300274B3B /* LaunchScreen.storyboard */,
@@ -231,9 +243,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				927303E128FD82F200274B3B /* OtherTableViewCell.xib in Resources */,
 				927303B928FD80A300274B3B /* LaunchScreen.storyboard in Resources */,
 				927303B628FD80A300274B3B /* Assets.xcassets in Resources */,
 				927303B428FD80A000274B3B /* Main.storyboard in Resources */,
+				927303E528FD881000274B3B /* TaskTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,7 +272,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				927303E028FD82F200274B3B /* OtherTableViewCell.swift in Sources */,
 				927303B128FD80A000274B3B /* ViewController.swift in Sources */,
+				927303E428FD881000274B3B /* TaskTableViewCell.swift in Sources */,
 				927303AD28FD80A000274B3B /* AppDelegate.swift in Sources */,
 				927303AF28FD80A000274B3B /* SceneDelegate.swift in Sources */,
 			);
