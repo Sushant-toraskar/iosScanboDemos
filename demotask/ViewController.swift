@@ -11,6 +11,7 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var MainTable: UITableView!
     var othercell = "OtherTableViewCell"
+    var maincell = "TaskTableViewCell"
     override func viewDidLoad() {
         
         super.viewDidLoad()
@@ -19,8 +20,12 @@ class ViewController: UIViewController {
         
         let nib = UINib(nibName: othercell, bundle: nil)
         MainTable.register(nib, forCellReuseIdentifier: othercell)
+        let mainnib = UINib(nibName: maincell, bundle: nil)
+        MainTable.register(mainnib, forCellReuseIdentifier: maincell)
 
     }
+    
+
     
     
 
@@ -28,19 +33,41 @@ class ViewController: UIViewController {
 }
 
 extension ViewController : UITableViewDelegate,UITableViewDataSource {
+
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 4
     }
     
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: othercell, for: indexPath) as! OtherTableViewCell
         cell.MainLabel.text = "Cell no \(indexPath.row)"
-        return cell
+        print(indexPath.row)
+        switch indexPath.row {
+        case 0:
+            return cell
+        case 1:
+            return cell
+        case 2:
+            let cell2 = tableView.dequeueReusableCell(withIdentifier: maincell, for: indexPath) as! TaskTableViewCell
+            return cell2
+        case 3:
+            return cell
+        default:
+            return cell
+        }
     }
     
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 80.0
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 20.0
     }
+    
+//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+//        return 80.0
+//    }
     
     
 }

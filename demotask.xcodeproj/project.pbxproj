@@ -19,6 +19,7 @@
 		927303E128FD82F200274B3B /* OtherTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 927303DF28FD82F200274B3B /* OtherTableViewCell.xib */; };
 		927303E428FD881000274B3B /* TaskTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927303E228FD881000274B3B /* TaskTableViewCell.swift */; };
 		927303E528FD881000274B3B /* TaskTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 927303E328FD881000274B3B /* TaskTableViewCell.xib */; };
+		927303E728FE87C200274B3B /* FormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927303E628FE87C200274B3B /* FormViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		927303DF28FD82F200274B3B /* OtherTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OtherTableViewCell.xib; sourceTree = "<group>"; };
 		927303E228FD881000274B3B /* TaskTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskTableViewCell.swift; sourceTree = "<group>"; };
 		927303E328FD881000274B3B /* TaskTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TaskTableViewCell.xib; sourceTree = "<group>"; };
+		927303E628FE87C200274B3B /* FormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +117,7 @@
 				927303E328FD881000274B3B /* TaskTableViewCell.xib */,
 				927303DF28FD82F200274B3B /* OtherTableViewCell.xib */,
 				927303B228FD80A000274B3B /* Main.storyboard */,
+				927303E628FE87C200274B3B /* FormViewController.swift */,
 				927303B528FD80A300274B3B /* Assets.xcassets */,
 				927303B728FD80A300274B3B /* LaunchScreen.storyboard */,
 				927303BA28FD80A300274B3B /* Info.plist */,
@@ -272,6 +275,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				927303E728FE87C200274B3B /* FormViewController.swift in Sources */,
 				927303E028FD82F200274B3B /* OtherTableViewCell.swift in Sources */,
 				927303B128FD80A000274B3B /* ViewController.swift in Sources */,
 				927303E428FD881000274B3B /* TaskTableViewCell.swift in Sources */,
