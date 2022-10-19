@@ -7,19 +7,21 @@
 
 import UIKit
 
-class TaskTableViewCell: UITableViewCell {
 
+
+class TaskTableViewCell: UITableViewCell {
+    
     @IBOutlet weak var rightImg: UIImageView!
     @IBOutlet weak var leftIMg: UIImageView!
     @IBOutlet weak var originalCell: UIView!
     @IBOutlet weak var MainViewOriginal: UIView!
     
    let sb = UIStoryboard(name: "Main", bundle: nil)
-    let nav = UINavigationController(
-    
+    var delegate : CellDataDelegate?
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        
         let touch = UITapGestureRecognizer(target: self, action: #selector(handleClick))
         rightImg.layer.cornerRadius = imageView?.frame.height ?? 100/2
         rightImg.layer.borderColor = UIColor.systemBlue.cgColor
@@ -31,16 +33,16 @@ class TaskTableViewCell: UITableViewCell {
         MainViewOriginal.layer.borderWidth = 1.0
         MainViewOriginal.addGestureRecognizer(touch)
         MainViewOriginal.isUserInteractionEnabled = true
-        
-        
-        
+   
     }
 
-    @objc func handleClick(sender : UITapGestureRecognizer) {
-        let vc = self.sb.instantiateViewController(identifier: "FormViewController") as! FormViewController
-        nav.navigationController?.pushViewController(vc, animated: true)
-        print("clicked")
+    @objc func handleClick() {
+        var str = delegate?.handleClickdele()
         
+//        let vc = self.sb.instantiateViewController(identifier: "FormViewController") as! FormViewController
+
+        print(str)
+
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -50,3 +52,4 @@ class TaskTableViewCell: UITableViewCell {
     }
     
 }
+

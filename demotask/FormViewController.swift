@@ -7,11 +7,13 @@
 
 import UIKit
 
-class FormViewController: UIViewController {
 
+
+class FormViewController: UIViewController {
+    var delegate : CellDataDelegate?
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
     }
     
@@ -26,4 +28,12 @@ class FormViewController: UIViewController {
     }
     */
 
+}
+
+extension FormViewController : CellDataDelegate{
+    func handleClickdele() -> String {
+        return "some"
+    }
+    
+    
 }

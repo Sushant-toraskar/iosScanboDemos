@@ -7,11 +7,18 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+protocol CellDataDelegate {
+    func handleClickdele()-> String
+}
 
+class ViewController: UIViewController {
+    
+    
+   
     @IBOutlet weak var MainTable: UITableView!
     var othercell = "OtherTableViewCell"
     var maincell = "TaskTableViewCell"
+    
     override func viewDidLoad() {
         
         super.viewDidLoad()
@@ -24,12 +31,13 @@ class ViewController: UIViewController {
         MainTable.register(mainnib, forCellReuseIdentifier: maincell)
 
     }
-    
 
-    
-    
-
-
+    @IBAction func btn(_ sender: UIButton) {
+        let sb = UIStoryboard(name: "Main", bundle: nil)
+        let vc  = sb.instantiateViewController(identifier: "FormViewController") as! FormViewController
+        
+        vc.present(vc, animated: false, completion: nil)
+    }
 }
 
 extension ViewController : UITableViewDelegate,UITableViewDataSource {
@@ -53,6 +61,7 @@ extension ViewController : UITableViewDelegate,UITableViewDataSource {
             return cell
         case 2:
             let cell2 = tableView.dequeueReusableCell(withIdentifier: maincell, for: indexPath) as! TaskTableViewCell
+        
             return cell2
         case 3:
             return cell
@@ -72,3 +81,10 @@ extension ViewController : UITableViewDelegate,UITableViewDataSource {
     
 }
 
+//extension ViewController : CellDataDelegate{
+//    func handleClickdele()-> String {
+//        return "Hello World"
+//    }
+//
+//
+//}
